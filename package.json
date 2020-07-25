@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Grunet/html-mutation-testing/issues"
   },
-  "homepage": "https://github.com/Grunet/html-mutation-testing#readme"
+  "homepage": "https://github.com/Grunet/html-mutation-testing#readme",
+  "devDependencies": {
+    "@stryker-mutator/core": "^3.3.1"
+  }
 }
