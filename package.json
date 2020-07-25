@@ -4,10 +4,14 @@
   "description": "Tooling for mutation testing basic html pages",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/webServer.js",
+    "start-server": "forever start ./src/webServer.js",
+    "stop-server": "fkill :3000 --force",
     "test": "mocha './test/**/*.js'",
+    "mutation-test": "stryker run",
+    "pretest-e2e": "npm run start-server",
     "test-e2e": "testcafe firefox test/e2e/",
-    "mutation-test": "stryker run"
+    "posttest-e2e": "npm run stop-server",
+    "mutation-test-e2e": "stryker run"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,8 @@
     "@stryker-mutator/core": "^3.3.1",
     "@stryker-mutator/javascript-mutator": "^3.3.1",
     "express": "^4.17.1",
+    "fkill-cli": "^6.0.1",
+    "forever": "^3.0.0",
     "mocha": "^8.0.1",
     "testcafe": "^1.8.8"
   }
