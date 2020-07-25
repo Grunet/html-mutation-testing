@@ -4,7 +4,8 @@
   "description": "Tooling for mutation testing basic html pages",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha './test/**/*.js'",
+    "mutation-test": "stryker run"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/Grunet/html-mutation-testing#readme",
   "devDependencies": {
-    "@stryker-mutator/core": "^3.3.1"
+    "@stryker-mutator/core": "^3.3.1",
+    "@stryker-mutator/javascript-mutator": "^3.3.1",
+    "mocha": "^8.0.1"
   }
 }
