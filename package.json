@@ -4,6 +4,7 @@
   "description": "Tooling for mutation testing basic html pages",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/webServer.js",
     "test": "mocha './test/**/*.js'",
     "test-e2e": "testcafe firefox test/e2e/",
     "mutation-test": "stryker run"
