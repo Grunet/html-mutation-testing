@@ -1,4 +1,4 @@
-const { sgn } = require("../../src/strykerSimpleCase.js");
+const { sgn } = require("../../src/stryker_gettingStarted.js");
 
 const assert = require("assert");
 
