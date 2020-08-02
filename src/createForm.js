@@ -16,7 +16,7 @@ function l5() {
   input.setAttribute("id", "username");
 }
 function l6() {
-  input.setAttribute("required", "");
+  input.setAttribute("required", true);
 }
 function l7() {
   form.appendChild(input);
