@@ -37,8 +37,16 @@ function convertToJsStatements(html) {
       for (const [attribute, value] of Object.entries(
         this.node["attr"] || {}
       )) {
+        let valueAsStr;
+        if (typeof value === "string") {
+          valueAsStr = value;
+        } else if (value.join) {
+          //Array of values
+          valueAsStr = value.join(" ");
+        }
+
         jsStatements.push(
-          `${elVarName}.setAttribute('${attribute}','${value}');`
+          `${elVarName}.setAttribute('${attribute}','${valueAsStr}');`
         );
       }
 
